@@ -61,14 +61,7 @@ h2
 /* --------- HEADER / HERO --------- */
 
 
-    <headerlogo>
-
-
-        <nav class="container" style="background-color:#010619;" > 
-            <div class="logo"> <img src="https://raw.githubusercontent.com/CaroMSerrano/neomyndlanding/main/Images/Isotipo_NeoMynd.png" alt="Neomynd" >
-                    NeoMynd - Future Intelligence, Today</div>
-        </nav>
-    </headerlogo>
+ 
     
     
     
@@ -201,11 +194,29 @@ footer span {
     color: #00c2ff;
     font-weight: 600;
 }
+    
+      .containerlogo {
+            position: fixed;
+            top: 0;
+                        width: 100%;
+            background: #010619;
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 229, 255, 0.1);
+        }
 </style>
 </head>
 
 <body>
+   <headerlogo>
 
+
+        <nav class="containerlogo" style="background-color:#010619;" > 
+            <div class="logo"> <img src="https://raw.githubusercontent.com/CaroMSerrano/neomyndlanding/main/Images/Isotipo_NeoMynd.png" alt="Neomynd" >
+                    NeoMynd - Future Intelligence, Today</div>
+        </nav>
+    </headerlogo>
 <header>
     <h1>Agentes IA para <span>Distribuidores Eléctricos</span></h1>
     <p>Más ventas. Menos costos. Más eficiencia en cada cotización y pedido.</p>
