@@ -6,7 +6,7 @@
 <title>Neomynd | Agentes IA para Distribuidores Eléctricos</title>
 
 <style>
-/* --------- BASE --------- */
+/* --------- RESET --------- */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -18,66 +18,41 @@ body {
     background: radial-gradient(circle at top left, #0b1736 0%, #020617 40%, #020010 100%);
     color: #e5f2ff;
     line-height: 1.6;
+    padding-top: 80px; /* espacio para navbar fixed */
 }
-    
-    .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-       .containerlogo {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-     .nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
 
+/* --------- NAVBAR --------- */
+.header-logo {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #010619;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 229, 255, 0.1);
+}
 
-
-    .nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-.logo {
-              display: flex;
-              align-items: center;
-              gap: 10px;
-              font-family: 'Segoe UI', sans-serif;
-              font-size: 1.2rem;
-              color: #010619;
-            }
-            .logo img {
-              height: 40px;
-            }
-
-/* --------- LAYOUT --------- */
-section {
-    padding: 60px 20px;
-    max-width: 1100px;
+.containerlogo {
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 18px 20px;
 }
 
-h1,  h3 {
-    font-weight: 700;
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #e5f2ff;
 }
-h2 
-    {
-    color:#0DCAFF;
-    font-weight: 700;
+
+.logo img {
+    height: 40px;
 }
-/* --------- HEADER / HERO --------- */
 
-
- 
-    
-    
-    
-header {
+/* --------- HERO HEADER --------- */
+.hero {
     padding: 80px 20px 70px;
     text-align: center;
     background:
@@ -86,22 +61,22 @@ header {
     border-bottom: 1px solid rgba(148, 163, 184, 0.35);
 }
 
-header h1 {
+.hero h1 {
     font-size: 2.3rem;
     margin-bottom: 16px;
 }
 
-header h1 span {
+.hero h1 span {
     color: #00c2ff;
 }
 
-header p {
+.hero p {
     font-size: 1.05rem;
     color: #cbd5f5;
     margin-bottom: 28px;
 }
 
-/* --------- BUTTONS --------- */
+/* --------- BUTTON --------- */
 .btn-primary {
     display: inline-block;
     background: linear-gradient(90deg, #00c2ff, #38bdf8);
@@ -112,7 +87,7 @@ header p {
     font-weight: 600;
     font-size: 0.98rem;
     box-shadow: 0 10px 30px rgba(0, 194, 255, 0.35);
-    transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+    transition: all 0.15s ease;
 }
 
 .btn-primary:hover {
@@ -121,7 +96,27 @@ header p {
     opacity: 0.95;
 }
 
-/* --------- GRID & CARDS --------- */
+/* --------- SECTIONS --------- */
+section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+section h2 {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+    color: #00c2ff;
+}
+
+section p.lead {
+    font-size: 1rem;
+    color: #cbd5f5;
+    max-width: 680px;
+    margin-bottom: 20px;
+}
+
+/* --------- GRID --------- */
 .grid {
     display: grid;
     gap: 22px;
@@ -147,27 +142,7 @@ header p {
     color: #cbd5f5;
 }
 
-
-
-
-/* --------- TYPOGRAPHY SECTIONS --------- */
-
-
-    
-    section h2 {
-    font-size: 1.7rem;
-    margin-bottom: 10px;
-        color: #a010619;
-}
-
-section p.lead {
-    font-size: 1rem;
-    color: #a010619;
-    max-width: 680px;
-    margin-bottom: 20px;
-}
-
-/* --------- LISTA DE BENEFICIOS --------- */
+/* --------- LIST --------- */
 ul {
     margin-top: 18px;
     margin-left: 18px;
@@ -175,11 +150,10 @@ ul {
 
 ul li {
     margin-bottom: 8px;
-    color: #e5f2ff;
     font-size: 0.97rem;
 }
 
-/* --------- CTA SECTION --------- */
+/* --------- CTA --------- */
 #cta {
     text-align: center;
     border-top: 1px solid rgba(148, 163, 184, 0.4);
@@ -202,34 +176,28 @@ footer {
     font-size: 0.85rem;
     color: #94a3b8;
 }
+
 footer span {
     color: #00c2ff;
     font-weight: 600;
 }
-    
-      .containerlogo {
-            position: fixed;
-            top: 0;
-                        width: 100%;
-            background: #010619;
-            backdrop-filter: blur(10px);
-            padding: 20px 0;
-            z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0, 229, 255, 0.1);
-        }
 </style>
 </head>
 
 <body>
-   <headerlogo>
 
+<!-- NAVBAR -->
+<header class="header-logo">
+    <div class="containerlogo">
+        <div class="logo">
+            <img src="https://raw.githubusercontent.com/CaroMSerrano/neomyndlanding/main/Images/Isotipo_NeoMynd.png" alt="Neomynd">
+            NeoMynd – Future Intelligence, Today
+        </div>
+    </div>
+</header>
 
-        <nav class="containerlogo" style="background-color:#010619;" > 
-            <div class="logo"> <img src="https://raw.githubusercontent.com/CaroMSerrano/neomyndlanding/main/Images/Isotipo_NeoMynd.png" alt="Neomynd" >
-                    NeoMynd - Future Intelligence, Today</div>
-        </nav>
-    </headerlogo>
-<header>
+<!-- HERO -->
+<header class="hero">
     <h1>Agentes IA para <span>Distribuidores Eléctricos</span></h1>
     <p>Más ventas. Menos costos. Más eficiencia en cada cotización y pedido.</p>
     <a href="#cta" class="btn-primary">Agendar Diagnóstico Gratis</a>
@@ -237,46 +205,47 @@ footer span {
 
 <section>
     <h2>¿Qué problemas resolvemos?</h2>
-    <p class="lead" >Llevamos la misma tecnología de Neomynd a la operación diaria de tu distribuidora eléctrica, para que el equipo comercial deje de apagar incendios y pueda enfocarse en vender.</p>
+    <p class="lead">
+        Llevamos la tecnología de Neomynd a la operación diaria de tu distribuidora eléctrica.
+    </p>
+
     <div class="grid">
         <div class="card">
             <h3>❌ Respuestas lentas</h3>
-            <p>Muchos clientes esperan horas por una cotización. El agente responde en tiempo real 24/7.</p>
+            <p>El agente responde en tiempo real 24/7.</p>
         </div>
         <div class="card">
             <h3>❌ Fichas y equivalencias</h3>
-            <p>Consulta por modelos, marcas y usos técnicos sin saturar a tus vendedores.</p>
+            <p>Consulta técnica sin saturar vendedores.</p>
         </div>
         <div class="card">
             <h3>❌ Cotizaciones perdidas</h3>
-            <p>Guiamos al cliente paso a paso hasta dejar el pedido listo para cerrar.</p>
+            <p>Guiamos al cliente hasta cerrar el pedido.</p>
         </div>
         <div class="card">
             <h3>❌ Consultas repetitivas</h3>
-            <p>Tu equipo deja de contestar siempre lo mismo y se enfoca en las oportunidades de mayor valor.</p>
+            <p>Tu equipo se enfoca en ventas reales.</p>
         </div>
     </div>
 </section>
 
 <section>
-    <h2>Qué hace nuestro Agente para tu Distribuidora</h2>
-    <p class="lead">Diseñamos un agente entrenado con tu catálogo eléctrico, políticas comerciales y lenguaje de tu marca.</p>
+    <h2>Qué hace nuestro Agente</h2>
+    <p class="lead">Entrenado con tu catálogo, precios y políticas.</p>
 
     <ul>
-        <li>📩 Responde cotizaciones vía Web, WhatsApp o email.</li>
-        <li>📦 Consulta stock y tiempos de entrega desde tus sistemas o planillas.</li>
-        <li>🔌 Sugiere productos alternativos y equivalentes cuando falta stock.</li>
-        <li>📊 Integra planillas, ERP o catálogos en minutos.</li>
-        <li>🏷️ Pide datos de obra, empresa y zona para que tu equipo reciba leads calificados.</li>
-        <li>⬆️ Escala consultas complejas a un humano cuando hace falta intervención comercial.</li>
+        <li>📩 Cotiza por Web, WhatsApp y Email</li>
+        <li>📦 Consulta stock y entrega</li>
+        <li>🔌 Sugiere equivalencias</li>
+        <li>📊 Integra ERP y planillas</li>
+        <li>🏷️ Califica leads</li>
+        <li>⬆️ Escala a humanos cuando hace falta</li>
     </ul>
 </section>
 
 <section id="cta">
     <h2>Agendá tu Diagnóstico Gratuito</h2>
-    <p>En 30 minutos te mostramos un caso aplicado a distribuidores eléctricos y estimamos el impacto en tiempo y ventas para tu operación.</p>
-
-    <!-- Reemplazá este link solo si cambia tu agenda -->
+    <p>En 30 minutos analizamos el impacto en ventas y eficiencia.</p>
     <a href="https://api.leadconnectorhq.com/widget/booking/SMCCcUsn6LWhstOfftAD"
        target="_blank"
        class="btn-primary">
@@ -290,3 +259,4 @@ footer span {
 
 </body>
 </html>
+
