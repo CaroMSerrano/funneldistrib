@@ -55,7 +55,41 @@ header p {
     color: #cbd5f5;
     margin-bottom: 28px;
 }
+ logo {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              font-family: 'Segoe UI', sans-serif;
+              font-size: 1.2rem;
+              color: #010619;
+            }
+            .logo img {
+              height: 40px;
+            }
 
+
+      header {
+            position: fixed;
+            top: 0;
+                        width: 100%;
+            background: #010619;
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 229, 255, 0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 /* --------- BUTTONS --------- */
 .btn-primary {
     display: inline-block;
@@ -158,6 +192,16 @@ footer span {
 </head>
 
 <body>
+<!-- Header -->
+    <header>
+
+
+        <nav class="container" style="background-color:#010619;" > 
+            <div class="logo"> <img src="https://raw.githubusercontent.com/CaroMSerrano/neomyndlanding/main/Images/Isotipo_NeoMynd.png" alt="Neomynd" >
+                    NeoMynd - Future Intelligence, Today</div>
+        </nav>
+    </header>
+
 
 <header>
     <h1>Agentes IA para <span>Distribuidores Eléctricos</span></h1>
