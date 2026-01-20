@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Neomynd | Agentes IA para Distribuidores Eléctricos</title>
+<title>Neomynd | Agentes IA para Distribuidores </title>
 
 <style>
 /* --------- RESET --------- */
@@ -72,6 +72,24 @@ body {
     margin-bottom: 28px;
 }
 
+/* --------- BOTONES --------- */
+.btn-primary {
+    display: inline-block;
+    padding: 14px 28px;
+    background: linear-gradient(135deg, #00e5ff, #38bdf8);
+    color: #020617;
+    font-weight: 600;
+    border-radius: 999px;
+    text-decoration: none;
+    box-shadow: 0 0 25px rgba(0, 229, 255, 0.5);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 35px rgba(0, 229, 255, 0.8);
+}
+
 /* --------- AGENT FEATURES --------- */
 .agent-features {
     max-width: 900px;
@@ -108,25 +126,25 @@ body {
     color: #00e5ff;
 }
 
+/* LISTAS CENTRADAS */
 .features-group ul {
     list-style: none;
-    text-align: left;
-    max-width: 420px;
+    text-align: center;
     margin: 0 auto;
 }
 
 .features-group li {
-    padding: 0.4rem 0;
+    padding: 6px 0;
     position: relative;
-    padding-left: 1.4rem;
 }
 
+/* check centrado arriba */
 .features-group li::before {
     content: "✓";
-    position: absolute;
-    left: 0;
+    display: block;
     color: #22c55e;
     font-weight: bold;
+    margin-bottom: 4px;
 }
 
 /* NOTA FINAL */
@@ -135,19 +153,37 @@ body {
     padding: 18px;
     border-radius: 8px;
     font-weight: 500;
+    font-color: #FFFFFF;
     background: linear-gradient(
         135deg,
         rgba(0, 229, 255, 0.25),
         rgba(56, 189, 248, 0.25)
     );
     border: 1px solid rgba(0, 229, 255, 0.6);
-    color: #133E4A;
+    color: #e6fbff;
 }
 
-/* CTA / FOOTER simples para no romper */
-#cta, footer {
+/* --------- CTA --------- */
+#cta {
     text-align: center;
-    margin: 80px 20px;
+    margin: 100px 20px;
+}
+
+#cta h2 {
+    margin-bottom: 10px;
+}
+
+#cta p {
+    margin-bottom: 25px;
+    color: #cbd5f5;
+}
+
+/* --------- FOOTER --------- */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid rgba(0, 229, 255, 0.3);
+    color: #9ccfff;
 }
 </style>
 </head>
@@ -164,6 +200,7 @@ body {
 <header class="hero">
     <h1>Agentes IA para <span>Distribuidores Eléctricos</span></h1>
     <p>Más ventas. Menos costos. Más eficiencia en cada cotización y pedido.</p>
+    <a href="#cta" class="btn-primary">Agenda un Diagnóstico Gratis</a>
 </header>
 
 <section class="agent-features">
@@ -204,6 +241,20 @@ body {
   </p>
 
 </section>
+
+<section id="cta">
+    <h2>Agenda un Diagnóstico Gratuito</h2>
+    <p>En 30 minutos analizamos el impacto en ventas y eficiencia.</p>
+    <a href="https://api.leadconnectorhq.com/widget/booking/SMCCcUsn6LWhstOfftAD"
+       target="_blank"
+       class="btn-primary">
+        Reservar mi diagnóstico
+    </a>
+</section>
+
+<footer>
+    <p><span>Neomynd</span> – Future Intelligence, Today</p>
+</footer>
 
 </body>
 </html>
