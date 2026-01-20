@@ -1,59 +1,204 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Neomynd | Agentes IA para Distribuidores</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neomynd | Agentes IA para Distribuidores</title>
 
-<!-- FAVICON -->
-<link rel="icon" href="favicon.ico" type="image/x-icon"></link></head>
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico">
 
-<style>
-/* --------- RESET --------- */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    background: radial-gradient(circle at top left, #0b1736 0%, #020617 40%, #020010 100%);
-    color: #e5f2ff;
-    line-height: 1.6;
-    padding-top: 80px;
-}
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #020617;
+      color: #e5f2ff;
+      padding-top: 80px;
+    }
 
-/* --------- NAVBAR --------- */
-.header-logo {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: #010619;
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-    box-shadow: 0 4px 20px rgba(0, 229, 255, 0.15);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    /* HEADER */
+    .header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 70px;
+      background: #010619;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(0,229,255,.2);
+      z-index: 1000;
+    }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    white-space: nowrap; /* evita salto de línea */
-}
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
 
-.logo img {
-    height: 40px;
-}
+    .logo img {
+      height: 38px;
+    }
 
-/* --------- HERO --------- */
-.hero {
-    padding: 80px 20px 70px;
-    text-align: center;
-    background:
-        radial-gradient
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      margin-bottom: 12px;
+    }
+
+    .hero span {
+      color: #00e5ff;
+    }
+
+    .hero p {
+      color: #cbd5f5;
+      margin-bottom: 30px;
+    }
+      
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      background: #00e5ff;
+      color: #020617;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* FEATURES */
+    .features {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .features h2 {
+      margin-bottom: 30px;
+    }
+
+    .card {
+      border: 2px solid #00e5ff;
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 25px;
+    }
+
+    .card h3 {
+      color: #00e5ff;
+      margin-bottom: 15px;
+    }
+
+    .card ul {
+      list-style: none;
+    }
+
+    .card li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      margin: 6px 0;
+    }
+
+    .card li::before {
+      content: "✓";
+      color: #22c55e;
+      font-weight: bold;
+    }
+
+    /* CTA */
+    .cta {
+      text-align: center;
+      margin: 80px 20px;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 30px;
+      border-top: 1px solid rgba(0,229,255,.3);
+      color: #9ccfff;
+    }
+
+    footer .brand {
+      font-weight: 700;
+      color: #00e5ff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="logo">
+      <img src="https://raw.githubusercontent.com/CaroMSerrano/neomyndlanding/main/Images/Isotipo_NeoMynd.png" alt="Neomynd">
+      NeoMynd – Future Intelligence, Today
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Agentes IA para <span>Distribuidores</span></h1>
+    <p>Más ventas. Menos costos. Más eficiencia en cada cotización y pedido.</p>
+    <a href="#cta" class="btn">Agenda un Diagnóstico Gratis</a>
+  </section>
+
+  <section class="features">
+    <h2>¿Qué hace nuestro Agente?</h2>
+
+    <div class="card">
+      <h3>📦 Funciones base</h3>
+      <ul>
+        <li>Responde consultas comerciales</li>
+        <li>Cotiza automáticamente</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>📩 Funciones operativas</h3>
+      <ul>
+        <li>Consulta stock y plazos de entrega</li>
+        <li>Sugiere equivalencias</li>
+        <li>Atiende Web, WhatsApp y Email</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>📊 Funciones avanzadas</h3>
+      <ul>
+        <li>Integración con ERP</li>
+        <li>Calificación de leads</li>
+        <li>Escalado a humanos</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="cta" class="cta">
+    <h2>Agenda un Diagnóstico Gratuito</h2>
+    <p>En 30 minutos analizamos el impacto en ventas y eficiencia.</p>
+    <a class="btn" target="_blank"
+       href="https://api.leadconnectorhq.com/widget/booking/SMCCcUsn6LWhstOfftAD">
+      Reservar mi diagnóstico
+    </a>
+  </section>
+
+  <footer>
+    <p><span class="brand">Neomynd</span> – Future Intelligence, Today</p>
+  </footer>
+
+</body>
+</html>
