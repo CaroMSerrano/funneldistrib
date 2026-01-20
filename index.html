@@ -18,7 +18,7 @@ body {
     background: radial-gradient(circle at top left, #0b1736 0%, #020617 40%, #020010 100%);
     color: #e5f2ff;
     line-height: 1.6;
-    padding-top: 80px; /* espacio para navbar fixed */
+    padding-top: 80px;
 }
 
 /* --------- NAVBAR --------- */
@@ -29,12 +29,11 @@ body {
     background: #010619;
     backdrop-filter: blur(10px);
     z-index: 1000;
-    box-shadow: 0 4px 20px rgba(0, 229, 255, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 229, 255, 0.15);
+    display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: center;        /* centro */
 }
-
-
 
 .logo {
     display: flex;
@@ -42,21 +41,20 @@ body {
     gap: 10px;
     font-size: 1.1rem;
     font-weight: 600;
-    color: #e5f2ff;
 }
 
 .logo img {
     height: 40px;
 }
 
-/* --------- HERO HEADER --------- */
+/* --------- HERO --------- */
 .hero {
     padding: 80px 20px 70px;
     text-align: center;
     background:
         radial-gradient(circle at top left, rgba(0, 194, 255, 0.20) 0%, transparent 55%),
         radial-gradient(circle at bottom right, rgba(56, 189, 248, 0.20) 0%, transparent 55%);
-    border-bottom: 1px solid rgba(148, 163, 184, 0.35);
+    border-bottom: 1px solid rgba(0, 229, 255, 0.4);
 }
 
 .hero h1 {
@@ -65,7 +63,7 @@ body {
 }
 
 .hero h1 span {
-    color: #00c2ff;
+    color: #00e5ff;
 }
 
 .hero p {
@@ -74,234 +72,105 @@ body {
     margin-bottom: 28px;
 }
 
-/* --------- BUTTON --------- */
-.btn-primary {
-    display: inline-block;
-    background: linear-gradient(90deg, #00c2ff, #38bdf8);
-    color: #020617;
-    padding: 14px 28px;
-    border-radius: 999px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.98rem;
-    box-shadow: 0 10px 30px rgba(0, 194, 255, 0.35);
-    transition: all 0.15s ease;
-}
-
-.btn-primary:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 14px 40px rgba(56, 189, 248, 0.45);
-    opacity: 0.95;
-}
-
-/* --------- SECTIONS --------- */
-section {
-    padding: 60px 20px;
-    max-width: 1100px;
-    margin: 0 auto;
-	/*---align-items: center;---*/
-	justify-content: center; 
-}
-
-section h2 {
-    font-size: 1.7rem;
-    margin-bottom: 10px;
-    color: #00c2ff;
-}
-
-section p.lead {
-    font-size: 1rem;
-    color: #cbd5f5;
-    max-width: 680px;
-    margin-bottom: 20px;
-}
-
-/* --------- GRID --------- */
-.grid {
-    display: grid;
-    gap: 22px;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    margin-top: 28px;
-}
-
-.card {
-    background: radial-gradient(circle at top left, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.85));
-    border-radius: 16px;
-    padding: 22px 20px;
-    border: 1px solid rgba(148, 163, 184, 0.35);
-    box-shadow: 0 18px 50px rgba(15, 23, 42, 0.85);
-}
-
-.card h3 {
-    margin-bottom: 10px;
-    color: #f9fafb;
-}
-
-.card p {
-    font-size: 0.95rem;
-    color: #cbd5f5;
-}
-
-/* --------- LIST --------- */
-ul {
-    margin-top: 18px;
-    margin-left: 18px;
-}
-
-ul li {
-    margin-bottom: 8px;
-    font-size: 0.97rem;
-}
-
-/* --------- CTA --------- */
-#cta {
+/* --------- AGENT FEATURES --------- */
+.agent-features {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 0 20px;
     text-align: center;
-    border-top: 1px solid rgba(148, 163, 184, 0.4);
-    border-bottom: 1px solid rgba(148, 163, 184, 0.4);
-    background: radial-gradient(circle at top, rgba(15, 23, 42, 0.95), rgba(2, 6, 23, 1));
 }
 
-#cta p {
-    color: #cbd5f5;
-    margin: 10px auto 24px;
-    max-width: 540px;
-}
-
-/* --------- FOOTER --------- */
-footer {
-    text-align: center;
-    padding: 26px 20px 30px;
-    background: #020617;
-    border-top: 1px solid rgba(30, 64, 175, 0.8);
-    font-size: 0.85rem;
-    color: #94a3b8;
-}
-.containerlogo {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 18px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    justify-content: center;        /* centro */
-}
-
-footer span {
-    color: #00c2ff;
-    font-weight: 600;
-}
-	.agent-features {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 3rem 1.5rem;
-  font-family: system-ui, sans-serif;
-   /* align-items: center;   centra verticalmente*/
-    justify-content: center;        /* centra horizontalmente*/
+.section-header {
+    margin-bottom: 50px;
 }
 
 .section-header h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+    font-size: 2rem;
+    margin-bottom: 10px;
 }
 
-.lead {
-  font-size: 1.1rem;
-  color: #555;
+.section-header .lead {
+    color: #b6ccff;
 }
 
+/* BLOQUES */
 .features-group {
-  margin-top: 2rem;
-  padding-left: 1rem;
-  border-left: 4px solid #e5e7eb;
+    border-left: 3px solid #00e5ff;
+    border-right: 3px solid #00e5ff;
+    padding: 25px 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    background: rgba(0, 229, 255, 0.05);
 }
 
 .features-group h3 {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
+    margin-bottom: 15px;
+    color: #00e5ff;
 }
 
 .features-group ul {
-  list-style: none;
-  padding-left: 0;
+    list-style: none;
+    text-align: left;
+    max-width: 420px;
+    margin: 0 auto;
 }
 
 .features-group li {
-  padding: 0.4rem 0;
-  position: relative;
-  padding-left: 1.2rem;
+    padding: 0.4rem 0;
+    position: relative;
+    padding-left: 1.4rem;
 }
 
 .features-group li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  color: #22c55e;
-  font-weight: bold;
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #22c55e;
+    font-weight: bold;
 }
 
+/* NOTA FINAL */
 .note {
-  margin-top: 2.5rem;
-  font-weight: 500;
-  background: #f9fafb;
-  padding: 1rem;
-  border-radius: 6px;
+    margin-top: 40px;
+    padding: 18px;
+    border-radius: 8px;
+    font-weight: 500;
+    background: linear-gradient(
+        135deg,
+        rgba(0, 229, 255, 0.25),
+        rgba(56, 189, 248, 0.25)
+    );
+    border: 1px solid rgba(0, 229, 255, 0.6);
+    color: #133E4A;
 }
 
+/* CTA / FOOTER simples para no romper */
+#cta, footer {
+    text-align: center;
+    margin: 80px 20px;
+}
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <header class="header-logo">
-    <div class="containerlogo">
-        <div class="logo">
-            <img src="https://raw.githubusercontent.com/CaroMSerrano/neomyndlanding/main/Images/Isotipo_NeoMynd.png" alt="Neomynd">
-            NeoMynd – Future Intelligence, Today
-        </div>
+    <div class="logo">
+        <img src="https://raw.githubusercontent.com/CaroMSerrano/neomyndlanding/main/Images/Isotipo_NeoMynd.png" alt="Neomynd">
+        NeoMynd – Future Intelligence, Today
     </div>
 </header>
 
-<!-- HERO -->
 <header class="hero">
     <h1>Agentes IA para <span>Distribuidores Eléctricos</span></h1>
     <p>Más ventas. Menos costos. Más eficiencia en cada cotización y pedido.</p>
-    <a href="#cta" class="btn-primary">Agenda un Diagnóstico Gratis</a>
 </header>
-
-<section>
-    <h2>¿Qué problemas resolvemos?</h2>
-    <p class="lead">
-        Llevamos la tecnología de Neomynd a la operación diaria de su distribuidora eléctrica.
-    </p>
-
-    <div class="grid">
-        <div class="card">
-            <h3>❌ Respuestas lentas</h3>
-            <p>El agente responde en tiempo real 24/7.</p>
-        </div>
-        <div class="card">
-            <h3>❌ Fichas y equivalencias</h3>
-            <p>Consulta técnica sin saturar vendedores.</p>
-        </div>
-        <div class="card">
-            <h3>❌ Cotizaciones perdidas</h3>
-            <p>Guiamos al cliente hasta cerrar el pedido.</p>
-        </div>
-        <div class="card">
-            <h3>❌ Consultas repetitivas</h3>
-            <p>Su equipo se enfoca en ventas reales.</p>
-        </div>
-    </div>
-</section>
 
 <section class="agent-features">
 
   <header class="section-header">
     <h2>¿Qué hace nuestro Agente?</h2>
-    <p class="lead">
-      Una vez entrenado con su catálogo, precios y políticas.
-    </p>
+    <p class="lead">Una vez entrenado con su catálogo, precios y políticas.</p>
   </header>
 
   <div class="features-group">
@@ -336,20 +205,5 @@ footer span {
 
 </section>
 
-<section id="cta">
-    <h2>Agenda un Diagnóstico Gratuito</h2>
-    <p>En 30 minutos analizamos el impacto en ventas y eficiencia.</p>
-    <a href="https://api.leadconnectorhq.com/widget/booking/SMCCcUsn6LWhstOfftAD"
-       target="_blank"
-       class="btn-primary">
-        Reservar mi diagnóstico
-    </a>
-</section>
-
-<footer>
-    <p><span>Neomynd</span> – Future Intelligence, Today</p>
-</footer>
-
 </body>
 </html>
-
