@@ -81,10 +81,9 @@
       font-size: 1.05rem;
     }
 
-    .hero-text {
-      max-width: 620px;
+    .text-wrap {
+      max-width: 640px;
       margin: 0 auto 30px;
-      text-align: center;
     }
 
     /* BUTTON */
@@ -146,7 +145,7 @@
 
     .card h3 {
       color: #00e5ff;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     .card p {
@@ -176,6 +175,10 @@
       color: #9ccfff;
     }
 
+    footer hr.neon {
+      margin-bottom: 25px; /* 👈 espacio corregido */
+    }
+
     footer .brand {
       color: #00e5ff;
       font-weight: 700;
@@ -190,7 +193,7 @@
   <div class="logo">
     <a href="/">
       <img src="https://raw.githubusercontent.com/CaroMSerrano/neomyndlanding/main/Images/Isotipo_NeoMynd.png" alt="Neomynd logo">
-      <strong>NeoMynd</strong> – Future Intelligence, Today
+      NeoMynd – Future Intelligence, Today
     </a>
   </div>
 </header>
@@ -199,9 +202,11 @@
 <section>
   <h1>Agentes IA para <span class="neon">Distribuidores</span></h1>
 
-  <p class="lead hero-text">
-    Automatiza cotizaciones, pedidos y consultas comerciales 24/7 sin sobrecargar al equipo de ventas.
-  </p>
+  <div class="text-wrap">
+    <p class="lead">
+      Automatiza cotizaciones, pedidos y consultas comerciales 24/7 sin sobrecargar al equipo de ventas.
+    </p>
+  </div>
 
   <a class="btn" target="_blank"
      href="https://api.leadconnectorhq.com/widget/booking/SMCCcUsn6LWhstOfftAD">
@@ -238,44 +243,40 @@
   </div>
 </section>
 
-<!-- SOLUCIONES -->
+<!-- SOLUCIÓN (MISMO FORMATO QUE CONCESIONARIAS) -->
 <section>
   <h2>¿Qué hace el Agente IA?</h2>
 
   <div class="grid-4">
     <div class="card">
       <h3>📦 Atención 24/7</h3>
-      <p>Responde consultas comerciales automáticamente.</p>
       <ul>
-        <li>Web y WhatsApp</li>
-        <li>Email automático</li>
+        <li>WhatsApp y Web</li>
+        <li>Respuestas instantáneas</li>
       </ul>
     </div>
 
     <div class="card">
       <h3>💬 Cotizaciones automáticas</h3>
-      <p>Entrega precios y condiciones sin fricción.</p>
       <ul>
-        <li>Listas de precios</li>
-        <li>Descuentos y mínimos</li>
+        <li>Precios y descuentos</li>
+        <li>Condiciones comerciales</li>
       </ul>
     </div>
 
     <div class="card">
-      <h3>📊 Consulta de stock</h3>
-      <p>Informa disponibilidad y plazos.</p>
+      <h3>📊 Stock y plazos</h3>
       <ul>
-        <li>Stock actualizado</li>
+        <li>Disponibilidad en tiempo real</li>
         <li>Fechas de entrega</li>
       </ul>
     </div>
 
     <div class="card">
       <h3>🔄 Seguimiento inteligente</h3>
-      <p>No deja oportunidades sin responder.</p>
       <ul>
         <li>Recordatorios automáticos</li>
-        <li>Escala a vendedor</li>
+        <li>Escala a vendedor humano</li>
       </ul>
     </div>
   </div>
@@ -284,9 +285,12 @@
 <!-- CTA -->
 <section id="cta">
   <h2>Agenda un Diagnóstico Gratuito</h2>
-  <p class="lead hero-text">
-    En 30 minutos analizamos cómo vender más sin sumar carga operativa.
-  </p>
+
+  <div class="text-wrap">
+    <p class="lead">
+      En 30 minutos analizamos cómo vender más sin sumar carga operativa.
+    </p>
+  </div>
 
   <a class="btn" target="_blank"
      href="https://api.leadconnectorhq.com/widget/booking/SMCCcUsn6LWhstOfftAD">
