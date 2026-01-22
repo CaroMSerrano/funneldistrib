@@ -1,218 +1,288 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Neomynd | Agentes IA para Distribuidores</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Favicon -->
-<link rel="icon" href="favicon.ico">
+  <!-- SEO -->
+  <title>Agentes IA para Distribuidores y Mayoristas | Neomynd</title>
+  <meta name="description" content="Agentes IA para distribuidores y mayoristas. Atención 24/7, cotizaciones automáticas, consulta de stock y seguimiento de pedidos.">
+  <meta name="keywords" content="agentes IA distribuidores, chatbot B2B, cotizaciones automáticas, pedidos mayoristas, automatización comercial">
 
-<style>
-  /* RESET */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico">
 
-  body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    background: #020617;
-    color: #e5f2ff;
-    padding-top: 80px;
-  }
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  /* HEADER */
-  .header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 70px;
-    background: #010619;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 15px rgba(0,229,255,.2);
-    z-index: 1000;
-  }
+    body {
+      font-family: system-ui, sans-serif;
+      background: #020617;
+      color: #e5f2ff;
+      line-height: 1.6;
+      padding-top: 80px;
+    }
 
-  .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 600;
-    white-space: nowrap;
-  }
+    /* HEADER */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 70px;
+      background: #010619;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(0,229,255,.25);
+      z-index: 1000;
+    }
 
-  .logo img {
-    height: 38px;
-  }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
 
-  /* HERO */
-  .hero {
-    text-align: center;
-    padding: 80px 20px;
-  }
+    .logo img {
+      height: 38px;
+    }
 
-  .hero h1 {
-    font-size: 2.2rem;
-    margin-bottom: 12px;
-  }
+    /* GENERAL */
+    section {
+      padding: 80px 20px;
+      text-align: center;
+    }
 
-  .hero span {
-    color: #00e5ff;
-  }
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 15px;
+    }
 
-  .hero p {
-    color: #cbd5f5;
-    margin-bottom: 30px;
-  }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
 
-  .btn {
-    display: inline-block;
-    padding: 14px 28px;
-    background: #00e5ff;
-    color: #020617;
-    border-radius: 999px;
-    text-decoration: none;
-    font-weight: 600;
-    margin-top: 20px; /* separación del texto de la línea */
-  }
+    .lead {
+      max-width: 700px;
+      margin: 0 auto 30px;
+      color: #cbd5f5;
+    }
 
-  /* FEATURES */
-  .features {
-    max-width: 900px;
-    margin: 25px auto; /* reduje el margen superior */
-    padding: 0 20px;
-    text-align: center;
-}
+    .neon {
+      color: #00e5ff;
+    }
 
-  .features h2 {
-    margin-bottom: 30px;
-  }
+    /* BUTTON */
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      background: #00e5ff;
+      color: #020617;
+      font-weight: 600;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 0 20px rgba(0,229,255,.4);
+      transition: transform .2s ease;
+    }
 
-  .card {
-    border: 2px solid #00e5ff;
-    border-radius: 12px;
-    padding: 25px;
-    margin-bottom: 25px;
-    background: rgba(0,229,255,0.05);
-    box-shadow: 0 0 20px rgba(0,229,255,0.2);
-  }
+    .btn:hover {
+      transform: translateY(-3px);
+    }
 
-  .card h3 {
-    color: #00e5ff;
-    margin-bottom: 15px;
-  }
+    /* DIVIDER */
+    hr.neon {
+      border: none;
+      height: 3px;
+      background: #00e5ff;
+      box-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff;
+      margin: 40px 0;
+    }
 
-  .card ul {
-    list-style: none;
-  }
+    /* GRID */
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-  .card li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    margin: 6px 0;
-  }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
 
-  .card li::before {
-    content: "✓";
-    color: #22c55e;
-    font-weight: bold;
-  }
+    .card {
+      border: 2px solid #00e5ff;
+      border-radius: 14px;
+      padding: 25px;
+      background: rgba(0,229,255,0.05);
+      box-shadow: 0 0 20px rgba(0,229,255,.15);
+    }
 
-  /* CTA */
-  .cta {
-    text-align: center;
-    margin: 80px 20px;
-  }
+    .card h3 {
+      color: #00e5ff;
+      margin-bottom: 12px;
+    }
 
-  .neon-line {
-    border: none;
-    height: 3px;
-    background: #00e5ff;
-    box-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff;
-    margin: 40px 0; /* separación de arriba y abajo */
-  }
+    .card ul {
+      list-style: none;
+    }
 
-  /* FOOTER */
-  footer {
-    text-align: center;
-    padding: 30px;
-   /* border-top: 1px solid rgba(0,229,255,.3);*/
-    color: #9ccfff;
-  }
+    .card li::before {
+      content: "✓ ";
+      color: #22c55e;
+      font-weight: bold;
+    }
 
-  footer .brand {
-    font-weight: 700;
-    color: #00e5ff;
-  }
-</style>
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #9ccfff;
+    }
+
+    footer .brand {
+      color: #00e5ff;
+      font-weight: 700;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .grid-4 {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header class="header">
+<!-- HEADER -->
+<header>
   <div class="logo">
-    <img src="https://raw.githubusercontent.com/CaroMSerrano/neomyndlanding/main/Images/Isotipo_NeoMynd.png" alt="Neomynd">
-    NeoMynd – Future Intelligence, Today
+    <a href="/" style="display:flex; align-items:center; gap:10px; color:inherit; text-decoration:none;">
+      <img src="https://raw.githubusercontent.com/CaroMSerrano/neomyndlanding/main/Images/Isotipo_NeoMynd.png" alt="Neomynd logo">
+      NeoMynd – Future Intelligence, Today
+    </a>
   </div>
 </header>
 
-<section class="hero">
-  <h1>Agentes IA para <span>Distribuidores</span></h1>
-  <p>Más ventas. Menos costos. Más eficiencia en cada cotización y pedido.</p>
-   <a class="btn" target="_blank" href="https://api.leadconnectorhq.com/widget/booking/SMCCcUsn6LWhstOfftAD">
-    Reservar mi diagnóstico
+<!-- HERO -->
+<section>
+  <h1>Agentes IA para <span class="neon">Distribuidores y Mayoristas</span></h1>
+  <p class="lead">
+    Automatiza cotizaciones, pedidos y consultas comerciales 24/7 sin sobrecargar al equipo de ventas.
+  </p>
+
+  <!-- 🔁 REEMPLAZAR LINK SI CAMBIA -->
+  <a class="btn" target="_blank"
+     href="https://api.leadconnectorhq.com/widget/booking/SMCCcUsn6LWhstOfftAD">
+    Agendar diagnóstico gratuito
   </a>
 </section>
-   <hr class="neon-line">
-</section>
 
-<section class="features">
-  <h2>¿Qué hace nuestro Agente?</h2>
+<hr class="neon">
 
-  <div class="card">
-    <h3>📦 Funciones base</h3>
-    <ul>
-      <li>Responde consultas comerciales</li>
-      <li>Cotiza automáticamente</li>
-    </ul>
-  </div>
+<!-- DOLORES -->
+<section>
+  <h2>Problemas reales en distribución</h2>
 
-  <div class="card">
-    <h3>📩 Funciones operativas</h3>
-    <ul>
-      <li>Consulta stock y plazos de entrega</li>
-      <li>Sugiere equivalencias</li>
-      <li>Atiende Web, WhatsApp y Email</li>
-    </ul>
-  </div>
+  <div class="grid-4">
+    <div class="card">
+      <h3>❌ Cotizaciones lentas</h3>
+      <p>Los clientes esperan respuestas y terminan comprando en otro lado.</p>
+    </div>
 
-  <div class="card">
-    <h3>📊 Funciones avanzadas</h3>
-    <ul>
-      <li>Integración con ERP</li>
-      <li>Calificación de leads</li>
-      <li>Escalado a humanos</li>
-    </ul>
+    <div class="card">
+      <h3>❌ Consultas repetidas</h3>
+      <p>Precios, mínimos, stock y plazos una y otra vez.</p>
+    </div>
+
+    <div class="card">
+      <h3>❌ Vendedores saturados</h3>
+      <p>Mucho WhatsApp, poco foco en cerrar ventas.</p>
+    </div>
+
+    <div class="card">
+      <h3>❌ Seguimiento deficiente</h3>
+      <p>Leads que nunca vuelven a ser contactados.</p>
+    </div>
   </div>
 </section>
 
-<section id="cta" class="cta">
+<!-- SOLUCIÓN -->
+<section>
+  <h2>¿Qué hace el Agente IA?</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>📦 Atención 24/7</h3>
+      <ul>
+        <li>Web, WhatsApp y Email</li>
+        <li>Respuesta inmediata</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>💬 Cotiza automáticamente</h3>
+      <ul>
+        <li>Precios y condiciones</li>
+        <li>Menos fricción comercial</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>📊 Consulta stock</h3>
+      <ul>
+        <li>Disponibilidad real</li>
+        <li>Plazos de entrega</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>🔄 Seguimiento inteligente</h3>
+      <ul>
+        <li>Recupera leads fríos</li>
+        <li>Escala a humano cuando hace falta</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
   <h2>Agenda un Diagnóstico Gratuito</h2>
-  <p>En 30 minutos analizamos el impacto en ventas y eficiencia.</p>
-  
-  <a class="btn" target="_blank" href="https://api.leadconnectorhq.com/widget/booking/SMCCcUsn6LWhstOfftAD">
+  <p class="lead">
+    En 30 minutos analizamos cómo aumentar ventas y eficiencia sin sumar personal.
+  </p>
+
+  <a class="btn" target="_blank"
+     href="https://api.leadconnectorhq.com/widget/booking/SMCCcUsn6LWhstOfftAD">
     Reservar mi diagnóstico
   </a>
 </section>
 
+<!-- FOOTER -->
 <footer>
-    <hr class="neon-line">
+  <hr class="neon">
   <p><span class="brand">Neomynd</span> – Future Intelligence, Today</p>
 </footer>
 
