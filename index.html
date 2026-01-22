@@ -6,20 +6,15 @@
 
   <!-- SEO -->
   <title>Agentes IA para Distribuidores | Neomynd</title>
-  <meta name="description" content="Agentes IA para distribuidores y mayoristas. Automatiza cotizaciones, pedidos y consultas comerciales 24/7 sin sobrecargar al equipo de ventas.">
-  <meta name="keywords" content="agente IA distribuidores, chatbot B2B, cotizaciones automáticas, pedidos mayoristas">
+  <meta name="description" content="Agentes IA para distribuidores: atención 24/7, cotizaciones automáticas, consulta de stock y seguimiento de leads para mayor eficiencia.">
+  <meta name="keywords" content="agente IA distribuidores, automatización cotizaciones, atención 24/7, leads mayoristas">
 
   <!-- Favicon -->
   <link rel="icon" href="favicon.ico">
 
   <style>
     /* RESET */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: system-ui, sans-serif;
       background: #020617;
@@ -27,8 +22,6 @@
       line-height: 1.6;
       padding-top: 80px;
     }
-
-    /* HEADER */
     header {
       position: fixed;
       top: 0;
@@ -41,7 +34,6 @@
       box-shadow: 0 4px 15px rgba(0,229,255,.25);
       z-index: 1000;
     }
-
     .logo a {
       display: flex;
       align-items: center;
@@ -51,59 +43,27 @@
       text-decoration: none;
       white-space: nowrap;
     }
+    .logo img { height: 38px; }
 
-    .logo img {
-      height: 38px;
-    }
+    section { padding: 80px 20px; text-align: center; }
+    h1 { font-size: 2.4rem; margin-bottom: 15px; }
+    h2 { font-size: 2rem; margin-bottom: 30px; }
+    .neon { color: #00e5ff; }
+    .lead-text { max-width: 680px; margin: 0 auto 30px; color: #cbd5f5; font-size:1.05rem; text-align:center; }
 
-    /* GENERAL */
-    section {
-      padding: 80px 20px;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 2.4rem;
-      margin-bottom: 15px;
-    }
-
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 40px;
-    }
-
-    .neon {
-      color: #00e5ff;
-    }
-
-    .lead {
-      color: #cbd5f5;
-      font-size: 1.05rem;
-    }
-
-    .text-wrap {
-      max-width: 640px;
-      margin: 0 auto 30px;
-    }
-
-    /* BUTTON */
     .btn {
-      display: inline-block;
       padding: 14px 28px;
       background: #00e5ff;
       color: #010619;
       font-weight: 600;
       border-radius: 30px;
       text-decoration: none;
-      box-shadow: 0 0 15px rgba(0,229,255,.4);
-      transition: transform .2s ease;
+      display: inline-block;
+      box-shadow: 0 0 20px rgba(0,229,255,.4);
+      transition: transform .2s;
     }
+    .btn:hover { transform: translateY(-2px); }
 
-    .btn:hover {
-      transform: translateY(-3px);
-    }
-
-    /* NEON LINE */
     hr.neon {
       border: none;
       height: 3px;
@@ -112,87 +72,35 @@
       margin: 0;
     }
 
-  * GRID GENERIC */
-    .grid {
-      max-width: 1000px;
+    .feature-group {
+      max-width: 900px;
       margin: 0 auto;
-      display: grid;
-      gap: 25px;
+      text-align: left;
+      padding: 0 15px;
     }
-
-    /* GRID 4 EN UNA LINEA */
-    .grid-4 {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 25px;
-    }
-
-    @media (max-width: 1024px) {
-      .grid-4 {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 600px) {
-      .grid-4 {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    /* CARDS */
-    .card {
-      border: 2px solid #00e5ff;
-      border-radius: 14px;
-      padding: 30px 20px;
-      background: rgba(0,229,255,.05);
-      height: 100%;
-    }
-
-    .card h3 {
+    .feature-group h3 {
       color: #00e5ff;
-      margin-bottom: 15px;
+      font-size: 1.2rem;
+      margin-top: 30px;
+      margin-bottom: 8px;
     }
-
-    .card p {
-      color: #cbd5f5;
-    }
-
-    .card ul {
+    .feature-group ul {
       list-style: none;
-      padding: 0;
+      padding-left: 1.2rem;
     }
-
-    .card li {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 8px;
-      margin: 8px 0;
-    }
-
-    .card li::before {
-      content: "✓";
+    .feature-group ul li::before {
+      content: "✔";
+      margin-right: 8px;
       color: #22c55e;
-      font-weight: 700;
     }
 
-    /* FOOTER */
     footer {
       text-align: center;
       padding: 40px 20px;
       color: #9ccfff;
     }
-
-    footer hr.neon {
-      margin-bottom: 25px; /* 👈 espacio corregido */
-    }
-
-    footer .brand {
-      color: #00e5ff;
-      font-weight: 700;
-    }
+    footer hr.neon { margin-bottom: 20px; }
+    footer .brand { color: #00e5ff; font-weight: 700; }
   </style>
 </head>
 
@@ -212,11 +120,9 @@
 <section>
   <h1>Agentes IA para <span class="neon">Distribuidores</span></h1>
 
-  <div class="text-wrap">
-    <p class="lead">
-      Automatiza cotizaciones, pedidos y consultas comerciales 24/7 sin sobrecargar al equipo de ventas.
-    </p>
-  </div>
+  <p class="lead-text">
+    Automatiza cotizaciones, pedidos y consultas comerciales 24/7 sin saturar al equipo de ventas.
+  </p>
 
   <a class="btn" target="_blank"
      href="https://api.leadconnectorhq.com/widget/booking/SMCCcUsn6LWhstOfftAD">
@@ -228,80 +134,66 @@
 
 <!-- DOLORES -->
 <section>
-  <h2>Problemas comunes en distribuidores</h2>
+  <h2>Problemas reales en distribuidores</h2>
+  <div class="feature-group">
+    <h3>❌ Cotizaciones lentas</h3>
+    <ul>
+      <li>Los clientes esperan y se van a la competencia</li>
+    </ul>
 
-  <div class="grid-4">
-    <div class="card">
-      <h3>❌ Consultas fuera de horario</h3>
-      <p>Leads que escriben cuando nadie responde.</p>
-    </div>
+    <h3>❌ Consultas repetidas</h3>
+    <ul>
+      <li>Precio, descuentos, mínimos, stock… siempre lo mismo</li>
+    </ul>
 
-    <div class="card">
-      <h3>❌ Cotizaciones repetidas</h3>
-      <p>El equipo responde siempre lo mismo.</p>
-    </div>
+    <h3>❌ Equipo saturado</h3>
+    <ul>
+      <li>Mucho WhatsApp y poca atención enfocada en cerrar ventas</li>
+    </ul>
 
-    <div class="card">
-      <h3>❌ Vendedores saturados</h3>
-      <p>Poco foco en cerrar ventas reales.</p>
-    </div>
-
-    <div class="card">
-      <h3>❌ Seguimiento inconsistente</h3>
-      <p>Leads que se enfrían sin respuesta.</p>
-    </div>
+    <h3>❌ Seguimiento inconsistente</h3>
+    <ul>
+      <li>Los leads se enfrían y no se concretan pedidos</li>
+    </ul>
   </div>
 </section>
 
-<!-- SOLUCIÓN (MISMO FORMATO QUE CONCESIONARIAS) -->
+<!-- SECCIÓN “¿Qué hace el Agente IA?” – MISMO FORMATO QUE CONCESIONARIAS -->
 <section>
- 
   <h2>¿Qué hace el Agente IA?</h2>
+  <div class="feature-group">
+    <h3>Atención 24/7</h3>
+    <ul>
+      <li>WhatsApp y web</li>
+      <li>Respuestas instantáneas a tus clientes</li>
+    </ul>
 
-  <div class="grid">
-    <div class="card">
-      <h3>📦 Atención 24/7</h3>
-      <ul>
-        <li>WhatsApp y Web</li>
-        <li>Respuestas instantáneas</li>
-      </ul>
-    </div>
+    <h3>Calificación automática</h3>
+    <ul>
+      <li>Detecta intención real de compra</li>
+      <li>Filtra leads de mayor calidad</li>
+    </ul>
 
-    <div class="card">
-      <h3>💬 Cotizaciones automáticas</h3>
-      <ul>
-        <li>Precios y descuentos</li>
-        <li>Condiciones comerciales</li>
-      </ul>
-    </div>
+    <h3>Cotizaciones automáticas</h3>
+    <ul>
+      <li>Genera cotizaciones sin intervención humana</li>
+      <li>Presenta condiciones y precios claros</li>
+    </ul>
 
-    <div class="card">
-      <h3>📊 Stock y plazos</h3>
-      <ul>
-        <li>Disponibilidad en tiempo real</li>
-        <li>Fechas de entrega</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>🔄 Seguimiento inteligente</h3>
-      <ul>
-        <li>Recordatorios automáticos</li>
-        <li>Escala a vendedor humano</li>
-      </ul>
-    </div>
+    <h3>Consulta de stock y pedidos</h3>
+    <ul>
+      <li>Disponibilidad de productos en tiempo real</li>
+      <li>Plazos de entrega integrados</li>
+    </ul>
   </div>
 </section>
-  
-<!-- CTA -->
+
+<!-- CTA FINAL -->
 <section id="cta">
   <h2>Agenda un Diagnóstico Gratuito</h2>
-
-  <div class="text-wrap">
-    <p class="lead">
-      En 30 minutos analizamos cómo vender más sin sumar carga operativa.
-    </p>
-  </div>
+  <p class="lead-text">
+    En 30 minutos analizamos cómo automatizar ventas y mejorar la eficiencia comercial.
+  </p>
 
   <a class="btn" target="_blank"
      href="https://api.leadconnectorhq.com/widget/booking/SMCCcUsn6LWhstOfftAD">
