@@ -112,7 +112,15 @@
       margin: 0;
     }
 
-    /* GRIDS */
+  * GRID GENERIC */
+    .grid {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      gap: 25px;
+    }
+
+    /* GRID 4 EN UNA LINEA */
     .grid-4 {
       max-width: 1200px;
       margin: 0 auto;
@@ -137,20 +145,18 @@
     .card {
       border: 2px solid #00e5ff;
       border-radius: 14px;
-      padding: 25px;
-      background: rgba(0,229,255,0.05);
-      box-shadow: 0 0 20px rgba(0,229,255,.2);
+      padding: 30px 20px;
+      background: rgba(0,229,255,.05);
       height: 100%;
     }
 
     .card h3 {
       color: #00e5ff;
-      margin-bottom: 12px;
+      margin-bottom: 15px;
     }
 
     .card p {
       color: #cbd5f5;
-      margin-bottom: 10px;
     }
 
     .card ul {
@@ -159,13 +165,17 @@
     }
 
     .card li {
-      margin: 6px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      margin: 8px 0;
     }
 
     .card li::before {
-      content: "✓ ";
+      content: "✓";
       color: #22c55e;
-      font-weight: bold;
+      font-weight: 700;
     }
 
     /* FOOTER */
