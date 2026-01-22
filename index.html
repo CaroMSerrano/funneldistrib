@@ -97,15 +97,6 @@
       transform: translateY(-2px);
     }
 
-    /* GRID GENERIC */
-    .grid {
-      max-width: 1000px;
-      margin: 0 auto;
-      display: grid;
-      gap: 25px;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    }
-
     /* GRID 4 EN UNA LINEA */
     .grid-4 {
       max-width: 1200px;
@@ -127,6 +118,15 @@
       }
     }
 
+    /* SOLUCIONES – cards verticales */
+    .solutions {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
     /* CARDS */
     .card {
       border: 2px solid #00e5ff;
@@ -134,6 +134,7 @@
       padding: 30px 20px;
       background: rgba(0,229,255,.05);
       height: 100%;
+      text-align: center;
     }
 
     .card h3 {
@@ -241,11 +242,11 @@
   </div>
 </section>
 
-<!-- SOLUCIÓN -->
+<!-- SOLUCIÓN – cards verticales -->
 <section>
   <h2>¿Qué hace el Agente IA?</h2>
 
-  <div class="grid">
+  <div class="solutions">
     <div class="card">
       <h3>💬 Atiende 24/7</h3>
       <ul>
